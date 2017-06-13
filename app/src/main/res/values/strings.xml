@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Magic</string>
+
+    <string name="main_title">魔发丝</string>
+
+    <string name="order_title">美发预约</string>
+
+    <string name="hairdresser_title">发型师选择</string>
+
+    <string name="project_title">项目选择</string>
+
+    <string name="time_title">时间选择</string>
+
+    <string name="over_time">请求超时</string>
+
+    <string name="error">请求出错，请重试</string>
+
+</resources>

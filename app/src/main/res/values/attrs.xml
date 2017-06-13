@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--简单ToolBar-->
+    <declare-styleable name="MyToolBar">
+        <attr name="mt_title" format="string" />
+        <attr name="mt_left_text" format="string" />
+        <attr name="mt_left_icon" format="reference" />
+        <attr name="mt_right_text" format="string" />
+        <attr name="mt_right_icon" format="reference" />
+    </declare-styleable>
+</resources>

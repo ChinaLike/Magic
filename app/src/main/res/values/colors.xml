@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="skin_primary_color">#34BEFC</color>
+    <color name="skin_accent_color">#34BEFC</color>
+
+    <!--按钮渐变色（预约项目的确定按钮,依次是上、中、下）-->
+    <color name="affirm_top">#e6016d</color>
+    <color name="affirm_middle">#b00153</color>
+    <color name="affirm_bottom">#720035</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+    <color name="divider">#E7E7E7</color>
+
+    <color name="main_activity_bg">#0095E2</color>
+    <color name="main_store_bg">#FFA800</color>
+    <color name="main_person_bg">#F74815</color>
+    <color name="main_order_bg">#FFAFAF</color>
+    <color name="main_exchange_bg">#01AEC2</color>
+
+    <color name="project_price_text">#909090</color>
+
+    <color name="time_choose_bg">#EDEDED</color>
+    <color name="time_bg_select">#FFA200</color>
+    <color name="time_bg_full">#FF6600</color>
+    <color name="time_bg_part">#FF6600</color>
+    <color name="time_bg_rest">#9c9c9c</color>
+
+
+</resources>

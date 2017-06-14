@@ -55,7 +55,7 @@ public class MyToolBar extends RelativeLayout {
         mTitle.setText(title);
         //设置右边图标
         if (rightDrawable != null) {
-            rightIcon.setPadding(DensityUtils.dp2px(10),DensityUtils.dp2px(10),
+            rightIcon.setPadding(DensityUtils.dp2px(10)*3,DensityUtils.dp2px(10),
                     DensityUtils.dp2px(10),DensityUtils.dp2px(10));
             rightIcon.setImageDrawable(rightDrawable);
         }
@@ -74,7 +74,7 @@ public class MyToolBar extends RelativeLayout {
         int size = DensityUtils.dp2px(10);
         leftText.setTextColor(Color.WHITE);
         if (drawable != null || text != null){
-            leftText.setPadding(size,size,size,size);
+            leftText.setPadding(size,size,size*3,size);
         }
         if (text != null) {
             leftText.setText(text);
@@ -104,7 +104,7 @@ public class MyToolBar extends RelativeLayout {
      */
     public void setRightIcon(Drawable drawable) {
         if (drawable != null) {
-            rightIcon.setPadding(DensityUtils.dp2px(10),DensityUtils.dp2px(10),
+            rightIcon.setPadding(DensityUtils.dp2px(10)*3,DensityUtils.dp2px(10),
                     DensityUtils.dp2px(10),DensityUtils.dp2px(10));
             rightIcon.setImageDrawable(drawable);
         }
@@ -116,7 +116,7 @@ public class MyToolBar extends RelativeLayout {
      * @param resId
      */
     public void setRightIcon(int resId) {
-        rightIcon.setPadding(DensityUtils.dp2px(10),DensityUtils.dp2px(10),
+        rightIcon.setPadding(DensityUtils.dp2px(10)*3,DensityUtils.dp2px(10),
                 DensityUtils.dp2px(10),DensityUtils.dp2px(10));
         rightIcon.setImageResource(resId);
     }

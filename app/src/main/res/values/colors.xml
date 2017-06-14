@@ -30,6 +30,7 @@
     <color name="time_bg_full">#FF6600</color>
     <color name="time_bg_part">#FF6600</color>
     <color name="time_bg_rest">#9c9c9c</color>
-
+    <color name="time_bg_free">#00FFFFFF</color>
+    <color name="time_divider">#9C9C9C</color>
 
 </resources>

@@ -1,9 +1,9 @@
 package com.tianxing.magic.entity.info;
 
-import com.tianxing.magic.entity.HairDresserBean;
-import com.tianxing.magic.entity.PriceBean;
-import com.tianxing.magic.entity.ProjectBean;
-import com.tianxing.magic.entity.StoreChooseBean;
+import com.tianxing.magic.entity.order.HairDresserBean;
+import com.tianxing.magic.entity.order.PriceBean;
+import com.tianxing.magic.entity.order.ProjectBean;
+import com.tianxing.magic.entity.order.SubbranchBean;
 
 import java.io.Serializable;
 
@@ -20,9 +20,9 @@ public class ShopInfo implements Serializable {
 
     private String shopId;//店铺ID
 
-    private StoreChooseBean stroe;//分店信息
+    private SubbranchBean subbranch;//分店信息
 
-    private HairDresserBean dresser;//发型师
+    private HairDresserBean designer;//发型师
 
     private ProjectBean project;//项目信息
 
@@ -39,12 +39,12 @@ public class ShopInfo implements Serializable {
         this.shopId = shopId;
     }
 
-    public StoreChooseBean getStroe() {
-        return stroe;
+    public SubbranchBean getSubbranch() {
+        return subbranch;
     }
 
-    public void setStroe(StoreChooseBean stroe) {
-        this.stroe = stroe;
+    public void setSubbranch(SubbranchBean subbranch) {
+        this.subbranch = subbranch;
     }
 
     public ProjectBean getProject() {
@@ -71,12 +71,12 @@ public class ShopInfo implements Serializable {
         this.priceB = priceB;
     }
 
-    public HairDresserBean getDresser() {
-        return dresser;
+    public HairDresserBean getDesigner() {
+        return designer;
     }
 
-    public void setDresser(HairDresserBean dresser) {
-        this.dresser = dresser;
+    public void setDesigner(HairDresserBean designer) {
+        this.designer = designer;
     }
 
     @Override
@@ -85,8 +85,8 @@ public class ShopInfo implements Serializable {
                 "token='" + token + '\'' +
                 ", key='" + key + '\'' +
                 ", shopId='" + shopId + '\'' +
-                ", stroe=" + stroe +
-                ", dresser=" + dresser +
+                ", stroe=" + subbranch +
+                ", dresser=" + designer +
                 ", project=" + project +
                 ", priceA=" + priceA +
                 ", priceB=" + priceB +

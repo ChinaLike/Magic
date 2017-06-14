@@ -1,5 +1,7 @@
 package com.tianxing.magic.entity;
 
+import android.text.TextUtils;
+
 import com.kelee.frame.util.T;
 
 import java.util.List;
@@ -23,6 +25,9 @@ public class ResponseBean<T> {
     }
 
     public String getErrdesc() {
+        if (TextUtils.isEmpty(errdesc)) {
+            return "获取数据失败";
+        }
         return errdesc;
     }
 

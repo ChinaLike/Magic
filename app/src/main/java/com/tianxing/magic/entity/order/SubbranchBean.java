@@ -1,4 +1,4 @@
-package com.tianxing.magic.entity;
+package com.tianxing.magic.entity.order;
 
 import java.io.Serializable;
 
@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 门店信息
  */
 
-public class StoreChooseBean implements Serializable{
+public class SubbranchBean implements Serializable{
 
     private String fdBranchID;
     private String fdPicURL;
@@ -75,7 +75,7 @@ public class StoreChooseBean implements Serializable{
 
     @Override
     public String toString() {
-        return "StoreChooseBean{" +
+        return "SubbranchBean{" +
                 "fdBranchID='" + fdBranchID + '\'' +
                 ", fdPicURL='" + fdPicURL + '\'' +
                 ", fdName='" + fdName + '\'' +

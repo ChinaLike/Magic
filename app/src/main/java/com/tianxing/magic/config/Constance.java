@@ -25,6 +25,8 @@ public class Constance {
         public static final String HAIRDRESSER_INFO = "hairdresserInfo";
         //店铺信息
         public static final String SHOP_INFO = "shopInfo";
+        //交流圈信息
+        public static final String COMM_INFO = "commInfo";
 
     }
 
@@ -46,6 +48,10 @@ public class Constance {
         public static final String PROJECT_TIME = "getappointment";
         //获取预约提醒
         public static final String PROJECT_TIP = "gettips";
+        //交流圈-获取用户信息
+        public static final String COMM_USER_INFO = "getuserinfo";
+        //交流圈-获取交流圈列表
+        public static final String COMM_LIST = "getmoments";
     }
 
 }

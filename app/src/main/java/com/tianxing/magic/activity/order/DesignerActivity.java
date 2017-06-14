@@ -12,9 +12,8 @@ import com.tianxing.magic.base.BaseActivity;
 import com.tianxing.magic.config.Constance;
 import com.tianxing.magic.config.ResultCode;
 import com.tianxing.magic.databinding.ActivityDesignerBinding;
-import com.tianxing.magic.databinding.ActivityHairdresserBinding;
-import com.tianxing.magic.entity.HairDresserBean;
-import com.tianxing.magic.entity.StoreChooseBean;
+import com.tianxing.magic.entity.order.HairDresserBean;
+import com.tianxing.magic.entity.order.SubbranchBean;
 import com.tianxing.magic.help.GlideSetting;
 import com.tianxing.magic.module.OrderModule;
 import com.zhy.adapter.recyclerview.CommonAdapter;
@@ -36,7 +35,7 @@ public class DesignerActivity extends BaseActivity<ActivityDesignerBinding> impl
     /**
      * 店铺信息
      */
-    private StoreChooseBean storeInfo;
+    private SubbranchBean storeInfo;
 
     @Override
     protected int setLayoutId() {
@@ -57,7 +56,7 @@ public class DesignerActivity extends BaseActivity<ActivityDesignerBinding> impl
      * @return
      */
     private String getChildStoreId() {
-        storeInfo = getShopInfo().getStroe();
+        storeInfo = getShopInfo().getSubbranch();
         return storeInfo.getFdBranchID();
     }
 
@@ -98,7 +97,7 @@ public class DesignerActivity extends BaseActivity<ActivityDesignerBinding> impl
 //        bundle.putSerializable(Constance.KEY.HAIRDRESSER_INFO, mList.get(position));
 //        bundle.putSerializable(Constance.KEY.STROE_INFO, storeInfo);
 //        intent.putExtras(bundle);
-        getShopInfo().setDresser(mList.get(position));
+        getShopInfo().setDesigner(mList.get(position));
         intent.putExtra(Constance.KEY.SHOP_INFO, getShopInfo());
         startActivity(intent);
     }

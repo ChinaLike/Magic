@@ -16,23 +16,22 @@
             app:mt_left_icon="@drawable/back"
             app:mt_title="@string/time_title" />
 
-        <RelativeLayout
+
+        <com.kelee.ui.widget.MyTabLayout
+            android:id="@+id/time_tab"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/time_data_bg">
+            android:layout_alignParentTop="true"
+            android:background="#D7D7D7"
+            app:show_number="5"
+            app:tabIndicatorColor="@color/skin_primary_color"
+            app:tabSelectedTextColor="@color/skin_primary_color"
+            app:tabTextColor="#3f3f3f" />
 
-            <com.kelee.ui.widget.MyTabLayout
-                android:id="@+id/time_tab"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="16.5dp"
-                android:layout_marginRight="16.5dp"
-                app:show_number="5"
-                app:tabIndicatorColor="@color/skin_primary_color"
-                app:tabSelectedTextColor="@color/skin_primary_color"
-                app:tabTextColor="#3f3f3f" />
-        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/time_divider" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -112,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_above="@id/annotation_parent"
-                android:background="#9C9C9C" />
+                android:background="@color/time_divider" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/time_recycler"

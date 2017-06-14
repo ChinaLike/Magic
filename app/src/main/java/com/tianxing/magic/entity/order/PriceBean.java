@@ -1,4 +1,4 @@
-package com.tianxing.magic.entity;
+package com.tianxing.magic.entity.order;
 
 import java.io.Serializable;
 

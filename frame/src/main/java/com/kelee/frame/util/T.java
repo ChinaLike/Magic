@@ -1,6 +1,7 @@
 package com.kelee.frame.util;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.widget.Toast;
 
 /**
@@ -13,6 +14,8 @@ public class T {
      * 是否显示Tost
      */
     public static boolean isShow = true;
+
+    public static Toast toast;
 
     private T() {
         throw new UnsupportedOperationException("cannot be instantiated");
@@ -59,4 +62,38 @@ public class T {
     public static void show(Context context, int message, int duration) {
         if (isShow) Toast.makeText(context, message, duration).show();
     }
+
+    /**
+     * 显示最后一次点击计时
+     * @param context
+     * @param message
+     */
+    public static void showLastShort(Context context, CharSequence message){
+        if (isShow){
+            if (toast == null){
+                toast = Toast.makeText(context,message,Toast.LENGTH_SHORT);
+            }else {
+                toast.setText(message);
+            }
+            toast.show();
+        }
+    }
+
+    /**
+     * 显示最后一次点击计时
+     * @param context
+     * @param message
+     */
+    public static void showLastCenterShort(Context context, CharSequence message){
+        if (isShow){
+            if (toast == null){
+                toast = Toast.makeText(context,message,Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+            }else {
+                toast.setText(message);
+            }
+            toast.show();
+        }
+    }
+
 }

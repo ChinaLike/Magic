@@ -1,5 +1,6 @@
 package com.tianxing.magic.activity.order;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,8 +19,8 @@ import com.tianxing.magic.base.BaseActivity;
 import com.tianxing.magic.config.Constance;
 import com.tianxing.magic.config.ResultCode;
 import com.tianxing.magic.databinding.ActivityProjectChooseBinding;
-import com.tianxing.magic.entity.PriceBean;
-import com.tianxing.magic.entity.ProjectBean;
+import com.tianxing.magic.entity.order.PriceBean;
+import com.tianxing.magic.entity.order.ProjectBean;
 import com.tianxing.magic.help.GlideSetting;
 import com.tianxing.magic.module.OrderModule;
 import com.zhy.adapter.recyclerview.CommonAdapter;
@@ -80,7 +81,7 @@ public class ProjectActivity extends BaseActivity<ActivityProjectChooseBinding> 
         settingRecyclerView(getBinding().projectRecycler);
 //        getModule(OrderModule.class).projectChoose(getChildStoreId(), getHairdresserId());
         // TODO: 2017/6/8/008 修改数据 ，有待商量
-        getModule(OrderModule.class).projectChoose(getShopInfo().getShopId(), getShopInfo().getDresser().getDesignerID());
+        getModule(OrderModule.class).projectChoose(getShopInfo().getShopId(), getShopInfo().getDesigner().getDesignerID());
     }
 
     /**
@@ -89,6 +90,7 @@ public class ProjectActivity extends BaseActivity<ActivityProjectChooseBinding> 
      * @param list
      */
     private void adapter(List<ProjectBean> list) {
+
         adapter = new CommonAdapter<ProjectBean>(this, R.layout.item_project_choose, list) {
             @Override
             protected void convert(ViewHolder holder, ProjectBean bean, int position) {

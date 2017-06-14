@@ -11,8 +11,13 @@
 
     <string name="time_title">时间选择</string>
 
+    <string name="communication_main_title">交流圈</string>
+
     <string name="over_time">请求超时</string>
 
     <string name="error">请求出错，请重试</string>
+    
+    <!--时间选择，时间不够提醒-->
+    <string name="time_warn">亲，您选择的项目用时超过当前预约时间空闲时间，请切换时间段！</string>
 
 </resources>

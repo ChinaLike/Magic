@@ -73,7 +73,7 @@ public class TimeView extends View {
         restFillColor = ContextCompat.getColor(context, R.color.time_bg_rest);
         fullFillColor = ContextCompat.getColor(context, R.color.time_bg_full);
         partFillColor = ContextCompat.getColor(context, R.color.time_bg_part);
-        freeFillColor = ContextCompat.getColor(context, R.color.white);
+        freeFillColor = ContextCompat.getColor(context, R.color.time_bg_free);
         //设置默认圆角
         int radius = DensityUtils.dp2px(context, getResources().getDimension(R.dimen.time_radius));
         restRadius = new float[]{0, 0, 0, 0, radius, radius, radius, radius};

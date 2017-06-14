@@ -25,6 +25,11 @@ public class ResultCode {
         //预约-分店列表-发型师列表-项目列表-预约时间
         public static final int TIME_LIST = 0xaa3;
 
+        //交流圈-交流圈主页-用户信息
+        public static final int COMM_USER = 0xab0;
+        //交流圈-交流圈信息列表
+        public static final int COMM_LIST = 0xab1;
+
     }
 
 }

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.ImageView;
 
 import com.tianxing.magic.R;
-import com.tianxing.magic.entity.ProjectBean;
+import com.tianxing.magic.entity.order.ProjectBean;
 import com.tianxing.magic.help.GlideSetting;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;

@@ -1,6 +1,6 @@
-package com.tianxing.magic.entity;
+package com.tianxing.magic.entity.order;
 
-import android.text.TextUtils;
+import com.tianxing.magic.entity.order.PriceBean;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,12 +13,12 @@ import java.util.List;
 
 public class ProjectBean implements Serializable {
     private String HeadImage;
-    private String ProjectID;//项目id
+    private int ProjectID;//项目id
     private String ItemA;           //项目名称A
     private List<Integer> PriceA;
     private String ItemB;//项目名称B
     private List<Integer> PriceB;
-    private String NeedMins;//花费时间
+    private long NeedMins;//花费时间
 
     private List<PriceBean> priceAList = new ArrayList<>();
 
@@ -36,11 +36,11 @@ public class ProjectBean implements Serializable {
         HeadImage = headImage;
     }
 
-    public String getProjectID() {
+    public int getProjectID() {
         return ProjectID;
     }
 
-    public void setProjectID(String projectID) {
+    public void setProjectID(int projectID) {
         ProjectID = projectID;
     }
 
@@ -80,11 +80,11 @@ public class ProjectBean implements Serializable {
         PriceB = priceB;
     }
 
-    public String getNeedMins() {
+    public long getNeedMins() {
         return NeedMins;
     }
 
-    public void setNeedMins(String needMins) {
+    public void setNeedMins(long needMins) {
         NeedMins = needMins;
     }
 

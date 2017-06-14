@@ -2,7 +2,6 @@ package com.tianxing.magic.module;
 
 import android.content.Context;
 
-import com.kelee.frame.module.AbsModule;
 import com.kelee.frame.util.T;
 import com.tianxing.magic.R;
 import com.tianxing.magic.base.BaseModule;
@@ -10,7 +9,6 @@ import com.tianxing.magic.config.Constance;
 import com.tianxing.magic.config.ResultCode;
 import com.tianxing.magic.config.ServerConstance;
 import com.tianxing.magic.entity.BannerBean;
-import com.tianxing.magic.entity.ProjectBean;
 import com.tianxing.magic.entity.ResponseBean;
 import com.tianxing.magic.entity.info.ShopInfo;
 import com.tianxing.magic.http.HttpUtil;

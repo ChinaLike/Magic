@@ -1,12 +1,14 @@
 package com.tianxing.magic.http.inf;
 
 import com.tianxing.magic.entity.BannerBean;
-import com.tianxing.magic.entity.HairDresserBean;
-import com.tianxing.magic.entity.ProjectBean;
+import com.tianxing.magic.entity.communication.CommBean;
+import com.tianxing.magic.entity.communication.UserInfoBean;
+import com.tianxing.magic.entity.order.HairDresserBean;
+import com.tianxing.magic.entity.order.ProjectBean;
 import com.tianxing.magic.entity.ResponseBean;
-import com.tianxing.magic.entity.StoreChooseBean;
-import com.tianxing.magic.entity.TimeBean;
-import com.tianxing.magic.entity.TipBean;
+import com.tianxing.magic.entity.order.SubbranchBean;
+import com.tianxing.magic.entity.order.TimeBean;
+import com.tianxing.magic.entity.order.TipBean;
 
 import java.util.List;
 import java.util.Map;
@@ -41,7 +43,7 @@ public interface IRequest {
      * @return
      */
     @POST("{url}")
-    Call<ResponseBean<List<StoreChooseBean>>> storeList(@Path("url") String url, @QueryMap Map<String, String> params);
+    Call<ResponseBean<List<SubbranchBean>>> storeList(@Path("url") String url, @QueryMap Map<String, String> params);
 
     /**
      * 请求发型师列表
@@ -82,6 +84,24 @@ public interface IRequest {
      */
     @POST("{url}")
     Call<ResponseBean<TipBean>> projectTip(@Path("url") String url, @QueryMap Map<String, String> params);
+
+    /**
+     * 获取交流圈用户信息
+     *
+     * @param params
+     * @return
+     */
+    @POST("info.asp")
+    Call<UserInfoBean> commUserInfo(@QueryMap Map<String, String> params);
+
+    /**
+     * 获取交流圈列表
+     *
+     * @param params
+     * @return
+     */
+    @POST("info.asp")
+    Call<ResponseBean<CommBean>> commList(@QueryMap Map<String, String> params);
 
 
 }

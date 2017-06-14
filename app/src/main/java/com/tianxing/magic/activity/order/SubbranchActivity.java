@@ -11,9 +11,8 @@ import com.tianxing.magic.R;
 import com.tianxing.magic.base.BaseActivity;
 import com.tianxing.magic.config.Constance;
 import com.tianxing.magic.config.ResultCode;
-import com.tianxing.magic.databinding.ActivityOrderBinding;
 import com.tianxing.magic.databinding.ActivitySubbranchBinding;
-import com.tianxing.magic.entity.StoreChooseBean;
+import com.tianxing.magic.entity.order.SubbranchBean;
 import com.tianxing.magic.help.GlideSetting;
 import com.tianxing.magic.module.OrderModule;
 import com.zhy.adapter.recyclerview.CommonAdapter;
@@ -30,7 +29,7 @@ import java.util.List;
 
 public class SubbranchActivity extends BaseActivity<ActivitySubbranchBinding> implements MultiItemTypeAdapter.OnItemClickListener {
 
-    private List<StoreChooseBean> mList = new ArrayList<>();
+    private List<SubbranchBean> mList = new ArrayList<>();
 
     @Override
     protected void init(Bundle savedInstanceState) {
@@ -45,11 +44,11 @@ public class SubbranchActivity extends BaseActivity<ActivitySubbranchBinding> im
      *
      * @param list
      */
-    private void adapter(List<StoreChooseBean> list) {
+    private void adapter(List<SubbranchBean> list) {
         mList = list;
-        CommonAdapter adapter = new CommonAdapter<StoreChooseBean>(this, R.layout.item_store_choose, list) {
+        CommonAdapter adapter = new CommonAdapter<SubbranchBean>(this, R.layout.item_store_choose, list) {
             @Override
-            protected void convert(ViewHolder holder, StoreChooseBean bean, int position) {
+            protected void convert(ViewHolder holder, SubbranchBean bean, int position) {
                 holder.setText(R.id.store_name, bean.getFdName());
                 holder.setText(R.id.store_phone, bean.getFdTel());
                 holder.setText(R.id.store_address, bean.getFdAddr());
@@ -71,14 +70,14 @@ public class SubbranchActivity extends BaseActivity<ActivitySubbranchBinding> im
         super.dataCallback(result, data);
         hintTempView();
         if (result == ResultCode.SERVICE.STROE_LIST) {
-            adapter((List<StoreChooseBean>) data);
+            adapter((List<SubbranchBean>) data);
         }
     }
 
     @Override
     public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
         Intent intent = new Intent(SubbranchActivity.this, DesignerActivity.class);
-        getShopInfo().setStroe(mList.get(position));
+        getShopInfo().setSubbranch(mList.get(position));
         intent.putExtra(Constance.KEY.SHOP_INFO, getShopInfo());
         startActivity(intent);
     }

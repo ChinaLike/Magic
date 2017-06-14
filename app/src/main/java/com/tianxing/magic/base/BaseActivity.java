@@ -15,6 +15,7 @@ import com.kelee.ui.widget.RecycleViewDivider;
 import com.tianxing.magic.R;
 import com.tianxing.magic.config.Constance;
 import com.tianxing.magic.config.ResultCode;
+import com.tianxing.magic.entity.info.CommunicationInfo;
 import com.tianxing.magic.entity.info.ShopInfo;
 import com.tianxing.magic.widget.MyToolBar;
 
@@ -135,6 +136,19 @@ public abstract class BaseActivity<VB extends ViewDataBinding> extends AbsActivi
             return info;
         }
         return new ShopInfo();
+    }
+
+    /**
+     * 获取交流圈信息（包含用户信息）
+     *
+     * @return
+     */
+    protected CommunicationInfo getCommInfo() {
+        CommunicationInfo info = (CommunicationInfo) getIntent().getSerializableExtra(Constance.KEY.COMM_INFO);
+        if (info != null) {
+            return info;
+        }
+        return new CommunicationInfo();
     }
 
     @Override

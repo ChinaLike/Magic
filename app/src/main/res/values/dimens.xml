@@ -8,6 +8,8 @@
     <dimen name="text_mini">12sp</dimen>
 
     <dimen name="time_radius">4dp</dimen>
+    <!--交流圈主页头部图片的高度-->
+    <dimen name="comm_main_header_height">250dp</dimen>
 
 
 </resources>

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:background="@color/white"
+        android:fitsSystemWindows="true"
         android:orientation="vertical">
 
         <com.tianxing.magic.widget.MyToolBar
@@ -15,13 +14,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mt_left_icon="@drawable/back"
-            app:mt_title="@string/order_title" />
+            app:mt_title="@string/communication_main_title" />
 
         <com.kelee.ui.xrecyclerview.XRecyclerView
-            android:id="@+id/store_recycler"
+            android:id="@+id/comm_recycler"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/item_store_choose" />
+            android:layout_height="match_parent" />
 
 
     </LinearLayout>

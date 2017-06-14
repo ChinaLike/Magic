@@ -8,16 +8,16 @@ import com.tianxing.magic.R;
 import com.tianxing.magic.config.Constance;
 import com.tianxing.magic.config.ResultCode;
 import com.tianxing.magic.databinding.ActivityTimeChooseBinding;
-import com.tianxing.magic.entity.HairDresserBean;
-import com.tianxing.magic.entity.ProjectBean;
+import com.tianxing.magic.entity.order.HairDresserBean;
+import com.tianxing.magic.entity.order.ProjectBean;
 import com.tianxing.magic.entity.ResponseBean;
-import com.tianxing.magic.entity.TimeBean;
-import com.tianxing.magic.entity.TipBean;
+import com.tianxing.magic.entity.order.TimeBean;
+import com.tianxing.magic.entity.order.TipBean;
 import com.tianxing.magic.entity.info.ShopInfo;
 import com.tianxing.magic.http.HttpUtil;
 import com.tianxing.magic.base.BaseModule;
 import com.tianxing.magic.config.ServerConstance;
-import com.tianxing.magic.entity.StoreChooseBean;
+import com.tianxing.magic.entity.order.SubbranchBean;
 
 import java.util.HashMap;
 import java.util.List;
@@ -54,10 +54,10 @@ public class OrderModule extends BaseModule {
         map.put(Constance.KEY.VALUE, getOneKey(StoreId));
         HttpUtil.getInstance().getService(ServerConstance.baseUrl)
                 .storeList(ServerConstance.url, map)
-                .enqueue(new Callback<ResponseBean<List<StoreChooseBean>>>() {
+                .enqueue(new Callback<ResponseBean<List<SubbranchBean>>>() {
                     @Override
-                    public void onResponse(Call<ResponseBean<List<StoreChooseBean>>> call, Response<ResponseBean<List<StoreChooseBean>>> response) {
-                        ResponseBean<List<StoreChooseBean>> bean = response.body();
+                    public void onResponse(Call<ResponseBean<List<SubbranchBean>>> call, Response<ResponseBean<List<SubbranchBean>>> response) {
+                        ResponseBean<List<SubbranchBean>> bean = response.body();
                         if (bean != null) {
                             if (bean.getErrcode() == 0) {
                                 callback(ResultCode.SERVICE.STROE_LIST, bean.getData());
@@ -70,7 +70,7 @@ public class OrderModule extends BaseModule {
                     }
 
                     @Override
-                    public void onFailure(Call<ResponseBean<List<StoreChooseBean>>> call, Throwable t) {
+                    public void onFailure(Call<ResponseBean<List<SubbranchBean>>> call, Throwable t) {
                         T.showShort(mContext, mContext.getString(R.string.over_time));
                     }
                 });
